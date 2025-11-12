@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>의료기관 제휴형 QR 리퍼럴 판매 모델 – AimNext Version</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+<style>
+  * {box-sizing:border-box;margin:0;padding:0;}
+  body {
+    font-family:"Pretendard",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+    background:radial-gradient(circle at top,#1f2937 0,#020617 45%,#020617 100%);
+    color:#e5e7eb;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding:60px 40px;
+    line-height:1.8;
+  }
+  .slide{
+    width:1400px;
+    background:rgba(15,23,42,0.92);
+    border-radius:30px;
+    padding:40px 50px;
+    border:1px solid rgba(148,163,184,0.35);
+    box-shadow:0 30px 80px rgba(15,23,42,0.8);
+    backdrop-filter:blur(16px);
+    position:relative;
+  }
+  .brand {
+    position:absolute;top:20px;right:30px;
+    font-size:13px;font-weight:600;
+    color:#94a3b8;letter-spacing:0.1em;
+    text-transform:uppercase;
+  }
+  .slide-title{
+    font-size:30px;font-weight:700;color:#f9fafb;margin-bottom:10px;
+  }
+  .slide-subtitle{
+    font-size:15px;color:#9ca3af;margin-bottom:30px;
+  }
+  .highlight{color:#7dd3fc;font-weight:500;}
+
+  /* Milestone layout */
+  .timeline{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    position:relative;
+    margin:60px 0;
+  }
+  .timeline::before{
+    content:"";
+    position:absolute;
+    top:40px;left:0;right:0;
+    height:6px;
+    background:linear-gradient(90deg,rgba(56,189,248,0.9),rgba(147,51,234,0.9));
+    border-radius:3px;
+    opacity:0.5;
+  }
+  .milestone{
+    position:relative;
+    flex:1;
+    text-align:center;
+  }
+  .node{
+    width:55px;height:55px;
+    background:radial-gradient(circle at top,#bae6fd,#38bdf8);
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-weight:700;color:#0f172a;
+    margin:0 auto 10px;
+    box-shadow:0 0 0 6px rgba(56,189,248,0.25),
+               0 0 25px rgba(56,189,248,0.8);
+  }
+  .milestone-label{font-weight:600;margin-bottom:6px;}
+  .milestone-desc{font-size:13px;color:#cbd5f5;max-width:200px;margin:0 auto;}
+
+  /* Accordion panels */
+  .section{
+    margin-top:40px;
+  }
+  .accordion{
+    background:rgba(30,41,59,0.95);
+    border:1px solid rgba(71,85,105,0.7);
+    border-radius:16px;
+    margin-bottom:14px;
+    overflow:hidden;
+  }
+  .acc-header{
+    padding:16px 20px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    transition:background 0.2s;
+  }
+  .acc-header:hover{background:rgba(56,189,248,0.08);}
+  .acc-content{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.4s ease;
+    background:rgba(15,23,42,0.95);
+    padding:0 20px;
+  }
+  .acc-content.open{
+    padding:18px 20px 22px;
+    max-height:1000px;
+  }
+  .acc-content ul{list-style:none;padding-left:10px;}
+  .acc-content li{margin-bottom:6px;position:relative;}
+  .acc-content li::before{
+    content:"•";
+    position:absolute;left:-10px;color:#38bdf8;font-size:12px;
+  }
+  .arrow{
+    font-size:18px;color:#7dd3fc;transition:transform 0.3s;
+  }
+  .open-btn{transform:rotate(90deg);}
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="brand">AIMNEXT</div>
+    <h1 class="slide-title">의료기관 제휴형 QR 리퍼럴 판매 모델</h1>
+    <p class="slide-subtitle">
+      병원은 <span class="highlight">권위 있는 웰니스 안내자</span>, FreyaX는 <span class="highlight">판매와 데이터·AS를 책임지는 파트너</span>.<br/>
+      상급종합병원·헬스케어 기관의 신뢰도 위에서 작동하는 <span class="highlight">웰니스 밴드 리퍼럴 구조</span>입니다.
+    </p>
+
+    <!-- Timeline -->
+    <section class="timeline">
+      <div class="milestone">
+        <div class="node">1</div>
+        <div class="milestone-label">타깃 기관 선정</div>
+        <div class="milestone-desc">디지털헬스센터, 검진센터 등 ‘검진 이후 관리’ 포커스 조직 리스트업</div>
+      </div>
+      <div class="milestone">
+        <div class="node">2</div>
+        <div class="milestone-label">제안 · 협의</div>
+        <div class="milestone-desc">병원에 ‘웰니스 가이드’ 협업 제안서 전달 · 판매가 아닌 교육 협력 강조</div>
+      </div>
+      <div class="milestone">
+        <div class="node">3</div>
+        <div class="milestone-label">협약 · 세팅</div>
+        <div class="milestone-desc">MOU 체결, 병원별 전용 QR · 랜딩페이지 제작 및 문구 승인</div>
+      </div>
+      <div class="milestone">
+        <div class="node">4</div>
+        <div class="milestone-label">운영 · 데이터</div>
+        <div class="milestone-desc">QR 배치 후 병원별 유입/구매 추적 · 월간 성과 리포트 생성</div>
+      </div>
+      <div class="milestone">
+        <div class="node">5</div>
+        <div class="milestone-label">리포트 · 확장</div>
+        <div class="milestone-desc">성과 기반 최적화 후 타 병원, 기업헬스센터로 확장</div>
+      </div>
+    </section>
+
+    <!-- Accordion Sections -->
+    <div class="section">
+      <div class="accordion">
+        <div class="acc-header">
+          <span>① 모델 개요 & 적용 기관</span>
+          <span class="arrow">▶</span>
+        </div>
+        <div class="acc-content">
+          <ul>
+            <li>병원 내 검진·상담 동선에 <span class="highlight">QR 코드/팜플렛</span>을 배치.</li>
+            <li>환자·검진고객은 QR 스캔 → <span class="highlight">FreyaX 스토어/랜딩</span>으로 자율 구매.</li>
+            <li>의료기관은 “추천·판매자”가 아니라 <span class="highlight">“웰니스 정보제공자”</span> 역할.</li>
+            <li>적용 기관: 상급종합병원 디지털헬스케어센터, 건강검진센터, 기업 헬스케어랩, 지자체 웰니스센터 등.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="acc-header">
+          <span>② 규제 · 리스크 설계 포인트</span>
+          <span class="arrow">▶</span>
+        </div>
+        <div class="acc-content">
+          <ul>
+            <li>FreyaX는 <span class="highlight">“비의료기기 웰니스 보조기기”</span>로 정의, 진단·치료·예방 표현 금지.</li>
+            <li>병원은 상품 추천/판매 주체 아님, <span class="highlight">“웰니스 교육 협력기관”</span>으로 명시.</li>
+            <li>병원 몫은 <span class="highlight">“홍보 협력비 / 교육자료 제작비”</span> 명목 지급.</li>
+            <li>모든 문구·랜딩·팜플렛은 병원 법무·홍보팀 검토 후 확정.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="acc-header">
+          <span>③ FreyaX 강점</span>
+          <span class="arrow">▶</span>
+        </div>
+        <div class="acc-content">
+          <ul>
+            <li><span class="highlight">브랜드 신뢰도 상승</span> — 상급종합병원 브랜딩 레버리지.</li>
+            <li><span class="highlight">정확한 타깃</span> — 검진/난임/수면/스트레스 코호트 직접 접근.</li>
+            <li><span class="highlight">ROI 우위</span> — 퍼포먼스 광고 대비 전환율 3~5배.</li>
+            <li><span class="highlight">확장성</span> — 다른 병원·기업헬스센터로 손쉬운 복제.</li>
+            <li><span class="highlight">스토리 확보</span> — “병원과 연결된 웰니스 밴드” 내러티브 형성.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  const accs = document.querySelectorAll('.accordion');
+  accs.forEach(acc => {
+    const header = acc.querySelector('.acc-header');
+    const content = acc.querySelector('.acc-content');
+    const arrow = acc.querySelector('.arrow');
+    header.addEventListener('click',()=>{
+      const isOpen = content.classList.contains('open');
+      document.querySelectorAll('.acc-content').forEach(c=>c.classList.remove('open'));
+      document.querySelectorAll('.arrow').forEach(a=>a.classList.remove('open-btn'));
+      if(!isOpen){content.classList.add('open');arrow.classList.add('open-btn');}
+    });
+  });
+</script>
+</body>
+</html>
